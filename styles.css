@@ -1,0 +1,285 @@
+/* ============================================
+   ATS / Print-First CV — A4 Canvas
+   Single column, formal, machine-readable text.
+   Width 794px = 210mm at 96dpi.
+   ============================================ */
+
+        :root {
+            --page-width: 794px;
+            --page-padding: 64px;
+            --ink: #111111;
+            --ink-soft: #333333;
+            --ink-muted: #555555;
+            --rule: #999999;
+            --font: Georgia, 'Times New Roman', Cambria, serif;
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            font-family: var(--font);
+            background: #d9d9d9;
+            color: var(--ink);
+            line-height: 1.45;
+        }
+
+        .page {
+            width: var(--page-width);
+            margin: 24px auto;
+            background: #ffffff;
+            padding: var(--page-padding);
+            box-shadow: 0 2px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        /* ---- PDF button ---- */
+        .pdf-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            padding: 11px 20px;
+            background: var(--ink);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+        }
+
+        .pdf-btn:hover {
+            background: #000;
+        }
+
+        /* ---- Header ---- */
+        .header {
+            text-align: center;
+            padding-bottom: 12px;
+            margin-bottom: 16px;
+            border-bottom: 2px solid var(--ink);
+        }
+
+        .header h1 {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            margin-bottom: 3px;
+        }
+
+        .header .title {
+            font-size: 12px;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--ink-soft);
+            margin-bottom: 7px;
+        }
+
+        .header .contact {
+            font-size: 10px;
+            color: var(--ink-muted);
+            font-family: Arial, sans-serif;
+        }
+
+        /* ---- Sections ---- */
+        .cv-section {
+            margin-bottom: 14px;
+        }
+
+        .cv-section h2 {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            border-bottom: 1px solid var(--rule);
+            padding-bottom: 3px;
+            margin-bottom: 9px;
+        }
+
+        .cv-section>p {
+            font-size: 10.5px;
+            color: var(--ink-soft);
+            text-align: justify;
+        }
+
+        /* ---- Entries ---- */
+        .entry {
+            margin-bottom: 10px;
+            page-break-inside: avoid;
+        }
+
+        .entry-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 12px;
+        }
+
+        .entry-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        .date {
+            font-size: 10px;
+            color: var(--ink-muted);
+            white-space: nowrap;
+            flex-shrink: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .entry-sub {
+            font-size: 10px;
+            color: var(--ink-muted);
+            font-style: italic;
+            margin-bottom: 2px;
+        }
+
+        .entry ul {
+            margin: 3px 0 0 18px;
+            padding: 0;
+        }
+
+        .entry ul li {
+            font-size: 10.3px;
+            color: var(--ink-soft);
+            line-height: 1.45;
+            margin-bottom: 1px;
+        }
+
+        /* ---- Projects ---- */
+        .group-label {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--ink);
+            margin: 9px 0 6px;
+            padding-bottom: 2px;
+            border-bottom: 1px dotted var(--rule);
+        }
+
+        .project {
+            margin-bottom: 8px;
+            page-break-inside: avoid;
+        }
+
+        .project p {
+            font-size: 10.3px;
+            color: var(--ink-soft);
+            line-height: 1.45;
+            text-align: justify;
+        }
+
+        /* ---- Certifications ---- */
+        .cert-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .cert-list li {
+            font-size: 10.3px;
+            color: var(--ink-soft);
+            margin-bottom: 4px;
+            page-break-inside: avoid;
+        }
+
+        .cert-year {
+            display: inline-block;
+            min-width: 38px;
+            font-weight: 700;
+            color: var(--ink);
+            font-family: Arial, sans-serif;
+        }
+
+        /* ---- Responsive ---- */
+        @media (max-width: 820px) {
+            .page {
+                width: 100%;
+                margin: 0;
+                box-shadow: none;
+                padding: 28px;
+            }
+
+            .entry-head {
+                flex-direction: column;
+                gap: 1px;
+            }
+        }
+
+        /* ---- PDF mode ---- */
+        .pdf-mode .pdf-btn {
+            display: none !important;
+        }
+
+        .pdf-mode .page {
+            margin: 0;
+            box-shadow: none;
+        }
+
+        /* ---- Print ---- */
+        @page {
+            size: A4 portrait;
+            margin: 0;
+        }
+
+        @media print {
+
+            html,
+            body {
+                background: #fff;
+            }
+
+            .pdf-btn {
+                display: none !important;
+            }
+
+            .page {
+                width: 210mm;
+                min-height: 297mm;
+                margin: 0;
+                padding: 14mm 16mm;
+                box-shadow: none;
+                font-size: 11px;
+            }
+
+            .entry,
+            .project,
+            .cert-list li {
+                page-break-inside: avoid;
+            }
+
+            .cv-section h2 {
+                page-break-after: avoid;
+            }
+        }
+
+
+        /* ---- Profile photo: minimal addition, original CV styling preserved ---- */
+        .header {
+            position: relative;
+            min-height: 116px;
+        }
+
+        .profile-photo {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 88px;
+            height: 112px;
+            object-fit: cover;
+            object-position: center top;
+        }

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazle Mawla Wahyuhanda — Curriculum Vitae</title>
+    <meta name="description"
+        content="Curriculum Vitae of Fazle Mawla Wahyuhanda, Artificial Intelligence Engineering student at Institut Teknologi Sepuluh Nopember.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <button id="download-pdf" class="pdf-btn" title="Download as PDF">Download PDF</button>
+
+    <main class="page" id="cv-content">
+
+        <!-- HEADER -->
+        <header class="header">
+            <img class="profile-photo"
+                src="assets/profile-photo.jpg"
+                alt="Fazle Mawla Wahyuhanda">
+            <h1>Fazle Mawla Wahyuhanda</h1>
+            <p class="title">Artificial Intelligence Engineering Student</p>
+            <p class="contact">
+                +62 896 71099 798 &nbsp;|&nbsp;
+                5054241020@student.its.ac.id &nbsp;|&nbsp;
+                linkedin.com/in/fazlemawla &nbsp;|&nbsp;
+                Surabaya, Indonesia
+            </p>
+        </header>
+
+        <!-- SUMMARY -->
+        <section class="cv-section">
+            <h2>Professional Summary</h2>
+            <p>Artificial Intelligence Engineering student with a strong foundation in machine learning,
+                deep learning, and data analysis. Experienced in building practical AI solutions across
+                computer vision, natural language processing, and data engineering. Disciplined, collaborative,
+                and committed to delivering reliable, well-documented work.</p>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="cv-section">
+            <h2>Education</h2>
+            <div class="entry">
+                <div class="entry-head">
+                    <span class="entry-title">Institut Teknologi Sepuluh Nopember</span>
+                    <span class="date">Jun 2024 &ndash; Jun 2028 (Expected)</span>
+                </div>
+                <div class="entry-sub">Bachelor of Artificial Intelligence Engineering, Surabaya</div>
+                <div class="entry-sub">Grade Point Average: 3.76 / 4.00</div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="cv-section">
+            <h2>Projects</h2>
+
+            <div class="group-label">Research and Competition Projects</div>
+
+            <div class="project">
+                <div class="entry-head">
+                    <span class="entry-title">Physis: Pediatric Wrist Fracture Triage</span>
+                </div>
+                <div class="entry-sub">PyTorch, timm, FastAPI, Next.js, Supabase, Cloudflare R2</div>
+                <p>Developed an age-aware pediatric wrist fracture triage system that ranks radiographs for
+                    radiologist review using a PhysisViT classifier, calibrated probabilities, age-band percentiles,
+                    and a localisation-only Faster R-CNN detector. Built the end-to-end research and deployment
+                    pipeline across model training, inference API, and a clinical-facing web application.</p>
+            </div>
+
+            <div class="project">
+                <div class="entry-head">
+                    <span class="entry-title">Wikipedia Next-Click Prediction with OCR-Driven Graph Search</span>
+                </div>
+                <div class="entry-sub">EasyOCR, OpenCV, LightGBM, NetworkX, BGE Embeddings</div>
+                <p>Built an OCR-driven hyperlink graph from 4,604 Wikipedia screenshot pages and combined
+                    policy-value ranking with leakage-aware, bounded graph search to predict a navigator's next
+                    click toward an unseen target article, achieving 0.7443 out-of-fold accuracy under
+                    target-disjoint GroupKFold validation.</p>
+            </div>
+
+            <div class="project">
+                <div class="entry-head">
+                    <span class="entry-title">Directed DCRNN-Style Traffic Speed Forecasting</span>
+                </div>
+                <div class="entry-sub">PyTorch, GRU, Directed Diffusion, Adaptive Adjacency, Graph Neural Networks</div>
+                <p>Developed a graph-based residual forecasting model for 1,260 traffic sensors using outgoing and
+                    incoming diffusion, recurrent temporal encoding, and learned adaptive adjacency to predict
+                    traffic speed at 5, 10, and 15-minute horizons, reaching a best validation MSE of 30.43.</p>
+            </div>
+
+            <div class="project">
+                <div class="entry-head">
+                    <span class="entry-title">GO-JUDI: Weakly Supervised Web Mining for Online Gambling Promotion
+                        Triage</span>
+                </div>
+                <div class="entry-sub">Web Mining, Weak Supervision, LLM Silver Audit, Heterogeneous Graph, PU Learning
+                </div>
+                <p>Developed a decision-support pipeline over 21,192 crawled web pages from 972 domains using weak
+                    supervision, domain-disjoint LLM silver auditing, heterogeneous graph intelligence, and
+                    Positive-Unlabeled ranking. The link-feature model achieved F1 0.956, while PU ranking reached
+                    PR-AUC 0.955 for prioritizing hidden-risk candidates.</p>
+            </div>
+
+            <div class="project">
+                <div class="entry-head">
+                    <span class="entry-title">Explainable Clinical Actionability Mining of Cancer Genomic
+                        Variants</span>
+                </div>
+                <div class="entry-sub">AACR Project GENIE, CIViC, LightGBM, XGBoost, SHAP</div>
+                <p>Built a pan-cancer actionability mining pipeline across 271,837 tumor samples and 3.32 million
+                    genomic alterations by integrating mutation, CNA, and fusion data with CIViC evidence to derive
+                    research-oriented rule-based labels. LightGBM achieved PR-AUC 0.7320 and recall 0.8368, with
+                    SHAP and permutation importance used for model interpretation.</p>
+            </div>
+
+            <div class="project">
+                <div class="entry-head">
+                    <span class="entry-title">Ambiguity-Aware Multi-Expert Waste Image Classification</span>
+                </div>
+                <div class="entry-sub">ConvNeXtV2, DINOv3, SigLIP2, Patch-MIL, StratifiedGroupKFold</div>
+                <p>Designed a group-aware five-fold classification pipeline for Recyclable, Electronic, and Organic
+                    waste across 26,527 training images, combining global visual anchors with hierarchical and
+                    object-centric experts through a cross-fitted guarded router. A held-out pilot improved
+                    Macro-F1 from 0.987886 to 0.988332 without degrading the guarded evaluation subsets.</p>
+            </div>
+
+            <div class="group-label">Personal Projects</div>
+
+            <div class="project">
+                <div class="entry-head">
+                    <span class="entry-title">E-Commerce Data Pipeline and Analytics Dashboard</span>
+                </div>
+                <div class="entry-sub">Airflow, PySpark, ClickHouse, Metabase, Docker</div>
+                <p>Built an automated end-to-end data pipeline that extracts e-commerce transactions through an
+                    API, processes them across data lake and data warehouse layers, and presents the results on
+                    an interactive analytics dashboard.</p>
+            </div>
+
+            <div class="project">
+                <div class="entry-head">
+                    <span class="entry-title">Topic Modeling for Indonesian Disaster News</span>
+                </div>
+                <div class="entry-sub">BERTopic, LDA, Natural Language Processing</div>
+                <p>Compared four topic modeling methods on an Indonesian disaster news corpus and produced
+                    interactive topic visualizations to support analysis of recurring themes.</p>
+            </div>
+
+            <div class="project">
+                <div class="entry-head">
+                    <span class="entry-title">Remote Sensing Image Captioning (TrTr-CMR)</span>
+                </div>
+                <div class="entry-sub">Swin Transformer, Transformer Language Model</div>
+                <p>Reproduced a dual Transformer captioning model that combines a Swin Transformer visual encoder
+                    with a Transformer language model, and evaluated it on a public remote sensing image dataset.</p>
+            </div>
+
+            <div class="project">
+                <div class="entry-head">
+                    <span class="entry-title">Grapefruit Semantic Segmentation</span>
+                </div>
+                <div class="entry-sub">U-Net, Mask R-CNN, YOLOv8-Seg</div>
+                <p>Benchmarked three segmentation architectures on a grapefruit dataset to identify the best
+                    balance between accuracy and inference speed.</p>
+            </div>
+
+            <div class="project">
+                <div class="entry-head">
+                    <span class="entry-title">Pothole Segmentation with SegFormer</span>
+                </div>
+                <div class="entry-sub">SegFormer, Deformable Separable Convolution</div>
+                <p>Trained a SegFormer model enhanced with deformable separable convolutions for pixel-level
+                    pothole detection on road surface imagery.</p>
+            </div>
+
+            <div class="group-label">Course Final Projects</div>
+
+            <div class="project">
+                <div class="entry-head">
+                    <span class="entry-title">Multimodal Deep Learning for Poverty Mapping</span>
+                </div>
+                <div class="entry-sub">Deep Learning, Satellite Imagery, Natural Language Processing</div>
+                <p>Developed a multimodal deep learning model that estimates poverty levels at the sub-district
+                    level by combining satellite imagery features with poverty-related news indicators across
+                    Surabaya, Gresik, and Bangkalan. Built the spatial image branch and the temporal tabular
+                    branch, then fused them to produce yearly poverty risk estimates constrained by official
+                    regional statistics.</p>
+            </div>
+
+            <div class="project">
+                <div class="entry-head">
+                    <span class="entry-title">Retrieval-Augmented Generation for Poverty News and Documents
+                        Analysis</span>
+                </div>
+                <div class="entry-sub">RAG, Hybrid Retrieval, Multilingual Embeddings</div>
+                <p>Designed a retrieval-augmented generation pipeline over an Indonesian poverty news corpus,
+                    covering document chunking, multilingual embedding, and hybrid retrieval to surface
+                    relevant context for sub-district narratives. Supported the poverty mapping project by
+                    turning unstructured documents and news into structured, traceable evidence.</p>
+            </div>
+
+            <div class="project">
+                <div class="entry-head">
+                    <span class="entry-title">Javanese Script OCR with Ensemble Learning</span>
+                </div>
+                <div class="entry-sub">ConvNeXtV2, YOLOv8, Support Vector Machine</div>
+                <p>Built an end-to-end Javanese script recognition system that segments sentence images,
+                    classifies characters with an ensemble of models, and transliterates the result to Latin
+                    text using rule-based logic.</p>
+            </div>
+
+            <div class="project">
+                <div class="entry-head">
+                    <span class="entry-title">Keyboard Word Prediction with Fuzzy Logic</span>
+                </div>
+                <div class="entry-sub">Fuzzy Logic, Genetic Algorithm, Particle Swarm Optimization, Streamlit</div>
+                <p>Developed a hybrid keyboard prediction system that combines an N-gram language model with
+                    Mamdani fuzzy logic, tuned through evolutionary optimization and trained on a large
+                    Indonesian text corpus with slang normalization.</p>
+            </div>
+
+            <div class="group-label">External Projects</div>
+
+            <div class="project">
+                <div class="entry-head">
+                    <span class="entry-title">Real-Time Trash Detection in Shopping Malls</span>
+                </div>
+                <div class="entry-sub">YOLOv8, OpenCV, Roboflow</div>
+                <p>Trained an object detection model for multi-category trash classification in mall
+                    environments, handling varied lighting, crowd occlusion, and reflective floor surfaces.</p>
+            </div>
+
+            <div class="project">
+                <div class="entry-head">
+                    <span class="entry-title">Automatic Number Plate Recognition (ANPR)</span>
+                </div>
+                <div class="entry-sub">YOLOv8, EasyOCR, Roboflow</div>
+                <p>Developed a two-stage Automatic Number Plate Recognition pipeline that detects number plates
+                    and extracts their text, intended for automated parking gates and security monitoring.</p>
+            </div>
+        </section>
+
+        <!-- WORK EXPERIENCE -->
+        <section class="cv-section">
+            <h2>Work Experience</h2>
+
+            <div class="entry">
+                <div class="entry-head">
+                    <span class="entry-title">AI Research Freelance</span>
+                    <span class="date">Mar 2026 &ndash; Present</span>
+                </div>
+                <div class="entry-sub">Independent Research Projects, Remote</div>
+                <ul>
+                    <li>Developed and tested machine learning and deep learning pipelines across computer vision,
+                        natural language processing, and spatiotemporal forecasting tasks.</li>
+                    <li>Prepared, cleaned, annotated, and validated datasets, including structured data entry and
+                        quality checks for reliable experiments.</li>
+                    <li>Designed evaluation workflows using cross-validation, ablation testing, error analysis, and
+                        metric tracking to identify model weaknesses.</li>
+                    <li>Documented experiments and reproducibility steps, then iterated on preprocessing, model
+                        configuration, and inference workflows.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-head">
+                    <span class="entry-title">Illustrator and Graphic Designer Intern, Paradox Studio</span>
+                    <span class="date">May 2023 &ndash; Dec 2023</span>
+                </div>
+                <div class="entry-sub">Creative studio for 2D and 3D illustration, animation, and design, Semarang</div>
+                <ul>
+                    <li>Produced digital illustrations aligned with client requirements.</li>
+                    <li>Collaborated on design concepts for a range of creative projects.</li>
+                    <li>Applied structured design methods to meet project deadlines.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ORGANISATIONAL EXPERIENCE -->
+        <section class="cv-section">
+            <h2>Organisational Experience</h2>
+
+            <div class="entry">
+                <div class="entry-head">
+                    <span class="entry-title">Laboratory Administrator, Information Intelligent Management Laboratory
+                        (IIMLab / MCI Lab), ITS</span>
+                    <span class="date">Jun 2026 &ndash; Present</span>
+                </div>
+                <div class="entry-sub">Institut Teknologi Sepuluh Nopember, Surabaya</div>
+                <ul>
+                    <li>Managed laboratory administration and operational needs to support academic and research
+                        activities.</li>
+                    <li>Coordinated internal information, documentation, and communication related to laboratory members
+                        and ongoing agendas.</li>
+                    <li>Supported seminars, guest lectures, research activities, and internal programs through data
+                        management and administrative coordination.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-head">
+                    <span class="entry-title">Creative Design Director, Schematics 2026</span>
+                    <span class="date">Apr 2026 &ndash; Present</span>
+                </div>
+                <div class="entry-sub">Surabaya</div>
+                <ul>
+                    <li>Directed the creative design division and oversaw the visual identity for all events and
+                        campaigns.</li>
+                    <li>Managed a team of designers to deliver consistent assets across digital and print media.</li>
+                    <li>Established design guidelines to maintain brand consistency across all materials.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-head">
+                    <span class="entry-title">Secretary of Creative Media Information, HMTC 2026</span>
+                    <span class="date">Jan 2026 &ndash; Present</span>
+                </div>
+                <div class="entry-sub">Surabaya</div>
+                <ul>
+                    <li>Managed the end-to-end workflow of all bureaus within the department.</li>
+                    <li>Coordinated task delegation, scheduling, and progress tracking across multiple bureaus.</li>
+                    <li>Served as the main liaison between bureau heads and the executive board.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-head">
+                    <span class="entry-title">Design Marketing Staff, Schematics 2025</span>
+                    <span class="date">Apr 2025 &ndash; Dec 2025</span>
+                </div>
+                <div class="entry-sub">Surabaya</div>
+                <ul>
+                    <li>Worked with the marketing team to plan and execute visual strategies for event promotion.</li>
+                    <li>Developed digital marketing materials to support event campaigns.</li>
+                    <li>Maintained the consistency of the visual identity across marketing channels.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-head">
+                    <span class="entry-title">Event Committee Member, Informatics Engineering 24 Committee</span>
+                    <span class="date">Oct 2024 &ndash; Dec 2025</span>
+                </div>
+                <div class="entry-sub">Surabaya</div>
+                <ul>
+                    <li>Organized event schedules to ensure smooth operations and participant engagement.</li>
+                    <li>Collaborated with team members to create memorable event experiences.</li>
+                    <li>Coordinated logistics and provided real-time problem solving during events.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-head">
+                    <span class="entry-title">Media Creative Staff, Heroes Day Esports ITS</span>
+                    <span class="date">Mar 2025 &ndash; Dec 2025</span>
+                </div>
+                <div class="entry-sub">Surabaya</div>
+                <ul>
+                    <li>Designed graphics and multimedia content for social media, promotions, and event branding.</li>
+                    <li>Collaborated on design concepts for a range of creative projects.</li>
+                    <li>Worked with other divisions to develop creative ideas and follow current design trends.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-head">
+                    <span class="entry-title">Secretarial Staff, Gerigi x UKM Expo ITS 2025</span>
+                    <span class="date">Jul 2025 &ndash; Aug 2025</span>
+                </div>
+                <div class="entry-sub">Surabaya</div>
+                <ul>
+                    <li>Managed participant data and documentation for accurate attendance records.</li>
+                    <li>Served as a mentor assistant, guiding new students throughout the event.</li>
+                    <li>Coordinated with mentors and divisions for smooth task distribution.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-head">
+                    <span class="entry-title">Mentor Staff, Inclenation 2025</span>
+                    <span class="date">Jun 2025 &ndash; Aug 2025</span>
+                </div>
+                <div class="entry-sub">Surabaya</div>
+                <ul>
+                    <li>Introduced the faculty and its culture to new students.</li>
+                    <li>Guided mentees throughout the event to keep them engaged and informed.</li>
+                    <li>Fostered a supportive atmosphere to help mentees adapt to the faculty.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-head">
+                    <span class="entry-title">Creative Design Staff, ELITE x PESRAF 2025</span>
+                    <span class="date">Apr 2025 &ndash; Oct 2025</span>
+                </div>
+                <div class="entry-sub">Surabaya</div>
+                <ul>
+                    <li>Created design assets to improve event visibility and participant engagement.</li>
+                    <li>Developed new design concepts with the creative team to support the branding vision.</li>
+                    <li>Collaborated to refine creative ideas for ongoing and upcoming projects.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-head">
+                    <span class="entry-title">Data Management Staff, ATLAS x ILITS 2025</span>
+                    <span class="date">Nov 2024 &ndash; Feb 2025</span>
+                </div>
+                <div class="entry-sub">Semarang</div>
+                <ul>
+                    <li>Managed attendance records for committee members and participants.</li>
+                    <li>Organized and analyzed feedback to support event evaluation.</li>
+                    <li>Prepared official reports and documentation to maintain accountability.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-head">
+                    <span class="entry-title">Security and License Volunteer, REEVA 2024 Main Event</span>
+                    <span class="date">Nov 2024</span>
+                </div>
+                <div class="entry-sub">Surabaya</div>
+                <ul>
+                    <li>Supervised access points to maintain the safety and order of the event.</li>
+                    <li>Collaborated with the team to keep a secure environment for participants and organizers.</li>
+                    <li>Contributed to a safe and orderly atmosphere for the event.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-head">
+                    <span class="entry-title">Observer and Data Management Volunteer, REEVA Valorant Tournament</span>
+                    <span class="date">Nov 2024</span>
+                </div>
+                <div class="entry-sub">Surabaya</div>
+                <ul>
+                    <li>Oversaw tournament operations and managed team data, scores, and match results.</li>
+                    <li>Ensured data accuracy and the smooth execution of technical aspects.</li>
+                    <li>Helped organize a seamless tournament experience for participants.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ACHIEVEMENTS -->
+        <section class="cv-section">
+            <h2>Achievements</h2>
+            <ul class="cert-list">
+                <li><span class="cert-year">2026</span> Semifinalist, BDC Satria Data 2026</li>
+                <li><span class="cert-year">2026</span> Delegate, GEMASTIK Data Mining 2026</li>
+                <li><span class="cert-year">2026</span> Semifinalist, UI Datathon 2026</li>
+            </ul>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section class="cv-section">
+            <h2>Certifications and Training</h2>
+            <ul class="cert-list">
+                <li><span class="cert-year">2025</span> Leadership and Self-Management Training, Pre-Basic Level, LKMM
+                    TD V FTEIC</li>
+                <li><span class="cert-year">2024</span> Leadership and Self-Management Training, Pre-Basic Level, LKMM
+                    Pra-TD V FTEIC</li>
+                <li><span class="cert-year">2024</span> Scientific Writing Training, Basic Level, PKTI-TD</li>
+                <li><span class="cert-year">2024</span> Student Entrepreneurship Skills Training, Basic Level, LKMW-TD
+                </li>
+            </ul>
+        </section>
+
+    </main>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
