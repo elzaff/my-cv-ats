@@ -60,6 +60,43 @@
 
             <div class="project">
                 <div class="entry-head">
+                    <span class="entry-title">Paddy Field Segmentation from Pl&eacute;iades Satellite Imagery</span>
+                </div>
+                <div class="entry-sub">DINOv3 ViT-L (Satellite), UNet++, UPerNet Swin-L, Mask2Former, PyTorch</div>
+                <p>Built a four-model segmentation ensemble for binary paddy field mapping on 1024&times;1024
+                    Pl&eacute;iades tiles with spatially disjoint test blocks, combining satellite-pretrained DINOv3,
+                    UNet++, UPerNet, and Mask2Former through probability averaging, flip test-time augmentation,
+                    and label-style morphological post-processing, reaching a validation IoU of 0.969 as a
+                    Hology 9.0 finalist.</p>
+            </div>
+
+            <div class="project">
+                <div class="entry-head">
+                    <span class="entry-title">Property Price Prediction from Listing Descriptions</span>
+                </div>
+                <div class="entry-sub">DeBERTa-v3-large, ModernBERT-large, Hugging Face Transformers, Modal</div>
+                <p>Fine-tuned DeBERTa-v3-large and ModernBERT-large regressors to predict property prices from
+                    free-text listing descriptions across 14,640 training listings, combining multi-seed 5-fold
+                    runs through a log-space blend with frozen out-of-fold recalibration. Reduced error from a
+                    TF-IDF and Ridge baseline (OOF MAE 398,141) to a public leaderboard MAE of 313,285 in the
+                    Hology 9.0 preliminary round.</p>
+            </div>
+
+            <div class="project">
+                <div class="entry-head">
+                    <span class="entry-title">Cross-Model Residual Erasure (CMRE) for Source-Bias-Robust Unsupervised E-Waste Clustering</span>
+                </div>
+                <div class="entry-sub">SigLIP2, DINOv3, PE-Core, PCA, Spectral Clustering, SCMax</div>
+                <p>Proposed Cross-Model Residual Erasure (CMRE) for label-free clustering of 3,792 e-waste images in
+                    the BDC Satria Data 2026 semifinal, projecting out the dominant directions of SigLIP2 and
+                    Perception Encoder embeddings that DINOv3 cannot predict to remove photo-source bias without
+                    object labels or style proxies. Combined with SCMax cluster-count selection and spectral
+                    clustering, CMRE raised cross-source consistency from 0.524 to 0.975 and reached AMI 0.917 on
+                    2,329 labelled images, documented in a scientific paper.</p>
+            </div>
+
+            <div class="project">
+                <div class="entry-head">
                     <span class="entry-title">Physis: Pediatric Wrist Fracture Triage</span>
                 </div>
                 <div class="entry-sub">PyTorch, timm, FastAPI, Next.js, Supabase, Cloudflare R2</div>
@@ -126,52 +163,36 @@
                     Macro-F1 from 0.987886 to 0.988332 without degrading the guarded evaluation subsets.</p>
             </div>
 
-            <div class="group-label">Personal Projects</div>
-
             <div class="project">
                 <div class="entry-head">
-                    <span class="entry-title">E-Commerce Data Pipeline and Analytics Dashboard</span>
+                    <span class="entry-title">Cost-Aware LLM Routing for Open-Weight Qwen Models</span>
                 </div>
-                <div class="entry-sub">Airflow, PySpark, ClickHouse, Metabase, Docker</div>
-                <p>Built an automated end-to-end data pipeline that extracts e-commerce transactions through an
-                    API, processes them across data lake and data warehouse layers, and presents the results on
-                    an interactive analytics dashboard.</p>
+                <div class="entry-sub">Qwen, Modal, LLM-as-a-Judge, RouteLLM, TF-IDF, Ridge Regression</div>
+                <p>Built an LLM routing prototype that selects among three Qwen models served on Modal GPUs to
+                    balance answer quality against cost, benchmarked against cheapest-model and best-single-model
+                    baselines. Calibrated the router with blind LLM-as-a-judge scores on RouteLLM prompts under a
+                    train/test split and trained a TF-IDF and Ridge quality predictor for live routing.</p>
             </div>
 
             <div class="project">
                 <div class="entry-head">
-                    <span class="entry-title">Topic Modeling for Indonesian Disaster News</span>
+                    <span class="entry-title">Sitting Posture Screening with REBA Scoring</span>
                 </div>
-                <div class="entry-sub">BERTopic, LDA, Natural Language Processing</div>
-                <p>Compared four topic modeling methods on an Indonesian disaster news corpus and produced
-                    interactive topic visualizations to support analysis of recurring themes.</p>
+                <div class="entry-sub">MediaPipe, RTMPose, Modal, Progressive Web App</div>
+                <p>Developed a progressive web app that screens sitting posture from a single side-view photo
+                    using REBA ergonomic scoring, comparing on-device MediaPipe pose estimation with RTMPose-L
+                    WholeBody served on a serverless GPU, while processing photos in memory without storing
+                    them.</p>
             </div>
 
             <div class="project">
                 <div class="entry-head">
-                    <span class="entry-title">Remote Sensing Image Captioning (TrTr-CMR)</span>
+                    <span class="entry-title">Missing-Modality Ablation for 3D Brain Tumor Segmentation</span>
                 </div>
-                <div class="entry-sub">Swin Transformer, Transformer Language Model</div>
-                <p>Reproduced a dual Transformer captioning model that combines a Swin Transformer visual encoder
-                    with a Transformer language model, and evaluated it on a public remote sensing image dataset.</p>
-            </div>
-
-            <div class="project">
-                <div class="entry-head">
-                    <span class="entry-title">Grapefruit Semantic Segmentation</span>
-                </div>
-                <div class="entry-sub">U-Net, Mask R-CNN, YOLOv8-Seg</div>
-                <p>Benchmarked three segmentation architectures on a grapefruit dataset to identify the best
-                    balance between accuracy and inference speed.</p>
-            </div>
-
-            <div class="project">
-                <div class="entry-head">
-                    <span class="entry-title">Pothole Segmentation with SegFormer</span>
-                </div>
-                <div class="entry-sub">SegFormer, Deformable Separable Convolution</div>
-                <p>Trained a SegFormer model enhanced with deformable separable convolutions for pixel-level
-                    pothole detection on road surface imagery.</p>
+                <div class="entry-sub">PyTorch, BraTS 2023, 3D MRI, Modal</div>
+                <p>Designed a 3D brain tumor segmentation pipeline on BraTS 2023 MRI volumes that evaluates all 15
+                    combinations of T1n, T1c, T2w, and FLAIR sequences to measure how missing modalities affect
+                    tumor sub-region segmentation, with cost-tracked training on cloud GPUs.</p>
             </div>
 
             <div class="group-label">Course Final Projects</div>
@@ -212,74 +233,34 @@
 
             <div class="project">
                 <div class="entry-head">
-                    <span class="entry-title">Keyboard Word Prediction with Fuzzy Logic</span>
+                    <span class="entry-title">E-Commerce Data Pipeline and Analytics Dashboard</span>
                 </div>
-                <div class="entry-sub">Fuzzy Logic, Genetic Algorithm, Particle Swarm Optimization, Streamlit</div>
-                <p>Developed a hybrid keyboard prediction system that combines an N-gram language model with
-                    Mamdani fuzzy logic, tuned through evolutionary optimization and trained on a large
-                    Indonesian text corpus with slang normalization.</p>
-            </div>
-
-            <div class="group-label">External Projects</div>
-
-            <div class="project">
-                <div class="entry-head">
-                    <span class="entry-title">Real-Time Trash Detection in Shopping Malls</span>
-                </div>
-                <div class="entry-sub">YOLOv8, OpenCV, Roboflow</div>
-                <p>Trained an object detection model for multi-category trash classification in mall
-                    environments, handling varied lighting, crowd occlusion, and reflective floor surfaces.</p>
-            </div>
-
-            <div class="project">
-                <div class="entry-head">
-                    <span class="entry-title">Automatic Number Plate Recognition (ANPR)</span>
-                </div>
-                <div class="entry-sub">YOLOv8, EasyOCR, Roboflow</div>
-                <p>Developed a two-stage Automatic Number Plate Recognition pipeline that detects number plates
-                    and extracts their text, intended for automated parking gates and security monitoring.</p>
+                <div class="entry-sub">Airflow, PySpark, ClickHouse, Metabase, Docker</div>
+                <p>Built an automated end-to-end data pipeline that extracts e-commerce transactions through an
+                    API, processes them across data lake and data warehouse layers, and presents the results on
+                    an interactive analytics dashboard.</p>
             </div>
         </section>
 
-        <!-- WORK EXPERIENCE -->
+        <!-- EXPERIENCE -->
         <section class="cv-section">
-            <h2>Work Experience</h2>
+            <h2>Experience</h2>
 
             <div class="entry">
                 <div class="entry-head">
-                    <span class="entry-title">AI Research Freelance</span>
-                    <span class="date">Mar 2026 &ndash; Present</span>
+                    <span class="entry-title">Data Science Mentor, Information Systems Expo (ISE) 2026</span>
+                    <span class="date">Sep 2026</span>
                 </div>
-                <div class="entry-sub">Independent Research Projects, Remote</div>
+                <div class="entry-sub">Department of Information Systems, Institut Teknologi Sepuluh Nopember, Surabaya</div>
                 <ul>
-                    <li>Developed and tested machine learning and deep learning pipelines across computer vision,
-                        natural language processing, and spatiotemporal forecasting tasks.</li>
-                    <li>Prepared, cleaned, annotated, and validated datasets, including structured data entry and
-                        quality checks for reliable experiments.</li>
-                    <li>Designed evaluation workflows using cross-validation, ablation testing, error analysis, and
-                        metric tracking to identify model weaknesses.</li>
-                    <li>Documented experiments and reproducibility steps, then iterated on preprocessing, model
-                        configuration, and inference workflows.</li>
+                    <li>Mentored participants in a multi-day data science bootcamp covering Python, exploratory data
+                        analysis, data preprocessing, and feature engineering.</li>
+                    <li>Taught machine learning for regression, classification, clustering, hyperparameter tuning
+                        with Optuna, and introductory deep learning through hands-on notebooks.</li>
+                    <li>Guided participants from problem framing to final project delivery, reviewing their modelling
+                        choices and evaluation methods.</li>
                 </ul>
             </div>
-
-            <div class="entry">
-                <div class="entry-head">
-                    <span class="entry-title">Illustrator and Graphic Designer Intern, Paradox Studio</span>
-                    <span class="date">May 2023 &ndash; Dec 2023</span>
-                </div>
-                <div class="entry-sub">Creative studio for 2D and 3D illustration, animation, and design, Semarang</div>
-                <ul>
-                    <li>Produced digital illustrations aligned with client requirements.</li>
-                    <li>Collaborated on design concepts for a range of creative projects.</li>
-                    <li>Applied structured design methods to meet project deadlines.</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- ORGANISATIONAL EXPERIENCE -->
-        <section class="cv-section">
-            <h2>Organisational Experience</h2>
 
             <div class="entry">
                 <div class="entry-head">
@@ -314,6 +295,26 @@
 
             <div class="entry">
                 <div class="entry-head">
+                    <span class="entry-title">AI Research Freelance</span>
+                    <span class="date">Mar 2026 &ndash; Present</span>
+                </div>
+                <div class="entry-sub">Independent Research Projects, Remote</div>
+                <ul>
+                    <li>Developed and tested machine learning and deep learning pipelines across computer vision,
+                        natural language processing, and spatiotemporal forecasting tasks.</li>
+                    <li>Built applied AI prototypes in cost-aware LLM routing, pose-based ergonomic screening, and 3D
+                        medical image segmentation.</li>
+                    <li>Prepared, cleaned, annotated, and validated datasets, including structured data entry and
+                        quality checks for reliable experiments.</li>
+                    <li>Designed evaluation workflows using cross-validation, ablation testing, error analysis, and
+                        metric tracking to identify model weaknesses.</li>
+                    <li>Documented experiments and reproducibility steps, then iterated on preprocessing, model
+                        configuration, and inference workflows.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-head">
                     <span class="entry-title">Secretary of Creative Media Information, HMTC 2026</span>
                     <span class="date">Jan 2026 &ndash; Present</span>
                 </div>
@@ -322,45 +323,6 @@
                     <li>Managed the end-to-end workflow of all bureaus within the department.</li>
                     <li>Coordinated task delegation, scheduling, and progress tracking across multiple bureaus.</li>
                     <li>Served as the main liaison between bureau heads and the executive board.</li>
-                </ul>
-            </div>
-
-            <div class="entry">
-                <div class="entry-head">
-                    <span class="entry-title">Design Marketing Staff, Schematics 2025</span>
-                    <span class="date">Apr 2025 &ndash; Dec 2025</span>
-                </div>
-                <div class="entry-sub">Surabaya</div>
-                <ul>
-                    <li>Worked with the marketing team to plan and execute visual strategies for event promotion.</li>
-                    <li>Developed digital marketing materials to support event campaigns.</li>
-                    <li>Maintained the consistency of the visual identity across marketing channels.</li>
-                </ul>
-            </div>
-
-            <div class="entry">
-                <div class="entry-head">
-                    <span class="entry-title">Event Committee Member, Informatics Engineering 24 Committee</span>
-                    <span class="date">Oct 2024 &ndash; Dec 2025</span>
-                </div>
-                <div class="entry-sub">Surabaya</div>
-                <ul>
-                    <li>Organized event schedules to ensure smooth operations and participant engagement.</li>
-                    <li>Collaborated with team members to create memorable event experiences.</li>
-                    <li>Coordinated logistics and provided real-time problem solving during events.</li>
-                </ul>
-            </div>
-
-            <div class="entry">
-                <div class="entry-head">
-                    <span class="entry-title">Media Creative Staff, Heroes Day Esports ITS</span>
-                    <span class="date">Mar 2025 &ndash; Dec 2025</span>
-                </div>
-                <div class="entry-sub">Surabaya</div>
-                <ul>
-                    <li>Designed graphics and multimedia content for social media, promotions, and event branding.</li>
-                    <li>Collaborated on design concepts for a range of creative projects.</li>
-                    <li>Worked with other divisions to develop creative ideas and follow current design trends.</li>
                 </ul>
             </div>
 
@@ -392,6 +354,19 @@
 
             <div class="entry">
                 <div class="entry-head">
+                    <span class="entry-title">Design Marketing Staff, Schematics 2025</span>
+                    <span class="date">Apr 2025 &ndash; Dec 2025</span>
+                </div>
+                <div class="entry-sub">Surabaya</div>
+                <ul>
+                    <li>Worked with the marketing team to plan and execute visual strategies for event promotion.</li>
+                    <li>Developed digital marketing materials to support event campaigns.</li>
+                    <li>Maintained the consistency of the visual identity across marketing channels.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-head">
                     <span class="entry-title">Creative Design Staff, ELITE x PESRAF 2025</span>
                     <span class="date">Apr 2025 &ndash; Oct 2025</span>
                 </div>
@@ -400,6 +375,19 @@
                     <li>Created design assets to improve event visibility and participant engagement.</li>
                     <li>Developed new design concepts with the creative team to support the branding vision.</li>
                     <li>Collaborated to refine creative ideas for ongoing and upcoming projects.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-head">
+                    <span class="entry-title">Media Creative Staff, Heroes Day Esports ITS</span>
+                    <span class="date">Mar 2025 &ndash; Dec 2025</span>
+                </div>
+                <div class="entry-sub">Surabaya</div>
+                <ul>
+                    <li>Designed graphics and multimedia content for social media, promotions, and event branding.</li>
+                    <li>Collaborated on design concepts for a range of creative projects.</li>
+                    <li>Worked with other divisions to develop creative ideas and follow current design trends.</li>
                 </ul>
             </div>
 
@@ -418,27 +406,27 @@
 
             <div class="entry">
                 <div class="entry-head">
-                    <span class="entry-title">Security and License Volunteer, REEVA 2024 Main Event</span>
-                    <span class="date">Nov 2024</span>
+                    <span class="entry-title">Event Committee Member, Informatics Engineering 24 Committee</span>
+                    <span class="date">Oct 2024 &ndash; Dec 2025</span>
                 </div>
                 <div class="entry-sub">Surabaya</div>
                 <ul>
-                    <li>Supervised access points to maintain the safety and order of the event.</li>
-                    <li>Collaborated with the team to keep a secure environment for participants and organizers.</li>
-                    <li>Contributed to a safe and orderly atmosphere for the event.</li>
+                    <li>Organized event schedules to ensure smooth operations and participant engagement.</li>
+                    <li>Collaborated with team members to create memorable event experiences.</li>
+                    <li>Coordinated logistics and provided real-time problem solving during events.</li>
                 </ul>
             </div>
 
             <div class="entry">
                 <div class="entry-head">
-                    <span class="entry-title">Observer and Data Management Volunteer, REEVA Valorant Tournament</span>
-                    <span class="date">Nov 2024</span>
+                    <span class="entry-title">Illustrator and Graphic Designer Intern, Paradox Studio</span>
+                    <span class="date">May 2023 &ndash; Dec 2023</span>
                 </div>
-                <div class="entry-sub">Surabaya</div>
+                <div class="entry-sub">Creative studio for 2D and 3D illustration, animation, and design, Semarang</div>
                 <ul>
-                    <li>Oversaw tournament operations and managed team data, scores, and match results.</li>
-                    <li>Ensured data accuracy and the smooth execution of technical aspects.</li>
-                    <li>Helped organize a seamless tournament experience for participants.</li>
+                    <li>Produced digital illustrations aligned with client requirements.</li>
+                    <li>Collaborated on design concepts for a range of creative projects.</li>
+                    <li>Applied structured design methods to meet project deadlines.</li>
                 </ul>
             </div>
         </section>
@@ -447,6 +435,7 @@
         <section class="cv-section">
             <h2>Achievements</h2>
             <ul class="cert-list">
+                <li><span class="cert-year">2026</span> Finalist, Hology 9.0</li>
                 <li><span class="cert-year">2026</span> Semifinalist, BDC Satria Data 2026</li>
                 <li><span class="cert-year">2026</span> Delegate, GEMASTIK Data Mining 2026</li>
                 <li><span class="cert-year">2026</span> Semifinalist, UI Datathon 2026</li>
